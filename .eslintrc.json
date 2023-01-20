@@ -21,3 +21,10 @@
   ]
 }
 /* eslint-disable rule-you-want-to-disable */
+{
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    },
+  },
+}
