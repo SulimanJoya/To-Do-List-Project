@@ -1,23 +1,20 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  entry: "./src/index.js",
-  devServer: {
-    static: './dist',
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      inject: false,
+      template: path.resolve(__dirname, 'src', 'index.html'),
+      filename: 'index.html',
     }),
   ],
-  output: {
-    filename: '[name].js',
-    path: __dirname + '/build',
-    chunkFilename: '[id].[chunkhash].js',
-    clean: true,
-  },
   module: {
     rules: [
       {
@@ -26,7 +23,9 @@ module.exports = {
       },
     ],
   },
-  optimization: {
-    runtimeChunk: 'single',
+  devServer: {
+    static: './dist',
+    hot: true,
   },
+  mode: 'development',
 };
