@@ -1,3 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
 body {
-  background-color: rgb(219, 195, 164);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f6f6f6;
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  border: 1px solid #f0f0f0;
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+
+.todo {
+  display: flex;
+  border: 1px solid #f0f0f0;
+  padding: 5px 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo_right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.add_todo {
+  width: 100%;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid #eee;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.add_todo:focus {
+  outline: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.header h1 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: rgb(99, 98, 98);
+}
+
+.todo_title {
+  margin: 0;
+  color: #414141;
+  font-weight: 400;
+}
+
+.checkbox {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.options {
+  content: "\2807";
+  font-size: 100px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  font-size: 1.1rem;
+  color: #757575;
+  background-color: #f6f6f6;
+  cursor: pointer;
+}
+
+.Refresh-icone {
+  font-size: 1.2rem;
+  color: #949292;
+  cursor: pointer;
 }

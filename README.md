@@ -89,7 +89,8 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link]()
+- [ ] None at the moment
+<!-- - [Live Demo Link]() -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,8 +124,10 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```
-- cd my-project
-- npm install
+  cd my-project
+```
+```
+  npm install
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
