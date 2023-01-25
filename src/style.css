@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: #f6f6f6;
-  font-family: 'Lato', sans-serif;
 }
 
 main {
@@ -28,6 +25,7 @@ main {
   display: flex;
   gap: 1rem;
   align-items: center;
+  flex: 1;
 }
 
 .add_todo {
@@ -36,7 +34,7 @@ main {
   box-sizing: border-box;
   border: 1px solid #eee;
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .add_todo:focus {
@@ -51,20 +49,35 @@ main {
 }
 
 .header h1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 900;
   color: rgb(99, 98, 98);
 }
 
 .todo_title {
   margin: 0;
-  color: #414141;
+  color: rgb(41, 40, 40);
   font-weight: 400;
+  width: 100%;
+  border: none;
+  flex: 1;
+  height: max-content;
+  background-color: inherit;
+  padding: 10px 5px;
+  font-size: 1.3rem;
+}
+
+.todo_form {
+  flex: 1;
+}
+
+.todo_title:focus {
+  outline: none;
 }
 
 .checkbox {
-  height: 1.2rem;
-  width: 1.2rem;
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 ul {
@@ -78,18 +91,28 @@ ul {
   font-size: 100px;
 }
 
+#delete_icon {
+  cursor: pointer;
+}
+
 button {
   width: 100%;
   padding: 10px;
   border: none;
   font-size: 1.1rem;
   color: #757575;
-  background-color: #f6f6f6;
   cursor: pointer;
 }
 
-.Refresh-icone {
-  font-size: 1.2rem;
+.material-symbols-outlined {
+  font-size: 2rem;
   color: #949292;
+}
+
+.header .material-symbols-outlined {
   cursor: pointer;
 }
+
+/* .over {
+  border: 3px dotted #666;
+} */
