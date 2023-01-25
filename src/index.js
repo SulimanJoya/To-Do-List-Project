@@ -1,64 +1,49 @@
-import './style.css';
+import "./style.css";
+import createTodo from "../modules/create.js";
+// import NewTodo from '../modules/todoClass.js';
 
-const todoUl = document.getElementById('todoList');
+const form = document.getElementById("form");
+export const todo = document.querySelector(".add_todo");
+export const todoUl = document.getElementById("todoList");
+export const todoListss = JSON.parse(localStorage.getItem("todos")) || [];
 
-const todoLists = [
-  {
-    id: 1,
-    description: 'Morning session',
-    completed: true,
-  },
-  {
-    id: 2,
-    description: 'First Program time meeting',
-    completed: true,
-  },
-  {
-    id: 3,
-    description: 'Second Program time meeting',
-    completed: false,
-  },
-  {
-    id: 4,
-    description: 'JavaScript packages management',
-    completed: true,
-  },
-  {
-    id: 5,
-    description: 'Lunch break',
-    completed: false,
-  },
-];
-
-const displayTodos = () => {
-  for (let i = 0; i < todoLists.length; i += 1) {
-    const item = todoLists[i];
-    const itemContainer = document.createElement('li');
-    itemContainer.className = 'todo';
-    const todoTitle = document.createElement('h3');
-    todoTitle.className = 'todo_title';
-    todoTitle.innerText = item.description;
-    const checkBox = document.createElement('input');
-    checkBox.type = 'checkbox';
-    checkBox.checked = item.completed;
-    checkBox.className = 'checkbox';
-    const option = document.createElement('span');
-    option.className = 'Refresh-icone';
-    option.innerText = 'more';
-
-    const div = document.createElement('div');
-    div.appendChild(checkBox);
-    div.appendChild(todoTitle);
-    div.className = 'todo_right';
-
-    itemContainer.appendChild(div);
-    itemContainer.appendChild(option);
-
-    todoUl.appendChild(itemContainer);
+class NewTodo {
+  constructor(description) {
+    this.description = description;
+    this.id = todoListss.length + 1;
   }
+
+  add = () => {
+    const item = {
+      id: this.id,
+      description: this.description,
+      completed: false,
+      disabled: true,
+      icon: "more_vert",
+    };
+    createTodo(item, todoListss, todoUl);
+    todoListss.push(item);
+  };
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const newTodo = new NewTodo(todo.value);
+  newTodo.add();
+  localStorage.setItem("todos", JSON.stringify(todoListss));
+  form.reset();
+});
+
+export const displayTodos = () => {
+  todoListss.forEach((todo, ind) => {
+    todo.id = ind + 1;
+    createTodo(todo, todoListss, todoUl);
+  });
 };
 
-window.addEventListener('load', () => {
+// localStorage.removeItem('todos');
+
+window.addEventListener("load", () => {
   displayTodos();
   return false;
 });
