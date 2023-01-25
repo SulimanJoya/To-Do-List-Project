@@ -1,11 +1,11 @@
-import "./style.css";
-import createTodo from "../modules/create.js";
+import './style.css';
+import createTodo from '../modules/create.js';
 // import NewTodo from '../modules/todoClass.js';
 
-const form = document.getElementById("form");
-export const todo = document.querySelector(".add_todo");
-export const todoUl = document.getElementById("todoList");
-export const todoListss = JSON.parse(localStorage.getItem("todos")) || [];
+const form = document.getElementById('form');
+export const todo = document.querySelector('.add_todo');
+export const todoUl = document.getElementById('todoList');
+export const todoListss = JSON.parse(localStorage.getItem('todos')) || [];
 
 class NewTodo {
   constructor(description) {
@@ -19,18 +19,18 @@ class NewTodo {
       description: this.description,
       completed: false,
       disabled: true,
-      icon: "more_vert",
+      icon: 'more_vert',
     };
     createTodo(item, todoListss, todoUl);
     todoListss.push(item);
   };
 }
 
-form.addEventListener("submit", (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   const newTodo = new NewTodo(todo.value);
   newTodo.add();
-  localStorage.setItem("todos", JSON.stringify(todoListss));
+  localStorage.setItem('todos', JSON.stringify(todoListss));
   form.reset();
 });
 
@@ -43,7 +43,7 @@ export const displayTodos = () => {
 
 // localStorage.removeItem('todos');
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   displayTodos();
   return false;
 });
