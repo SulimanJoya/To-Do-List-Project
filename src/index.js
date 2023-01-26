@@ -1,6 +1,5 @@
 import './style.css';
 import createTodo from '../modules/create.js';
-// import NewTodo from '../modules/todoClass.js';
 
 const form = document.getElementById('form');
 export const todo = document.querySelector('.add_todo');
