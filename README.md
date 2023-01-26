@@ -128,7 +128,7 @@ Install this project with:
 ```
 
 ```
-  npm install webpack webpack-cli --save-dev
+  npm run build
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,41 +137,9 @@ Install this project with:
 
 To run the project, execute the following command:
 
-- run with live server
-
-<!--
-Example command:
-
 ```sh
-  rails server
+  npm start
 ```
---->
-
-<!-- ### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
-<!-- ### Deployment
-
-You can deploy this project using: -->
-
-<!--
-Example:
-
-```sh
-
-```
- -->
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- AUTHORS -->
 
@@ -181,8 +149,8 @@ Example:
 
 👤 **Mohammad Suliman Joya**
 
-- GitHub: [@githubhandle](https://github.com/SulimanJoya)
-- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/sjoya66/)
+- GitHub: [@SulimanJoya](https://github.com/SulimanJoya)
+- LinkedIn: [Mohammad Suliman Joya](https://www.linkedin.com/in/sjoya66/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -190,9 +158,11 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+> Below is a lists of Features to be added later:
 
-- [ ] None at the moment
+- Deploy the app online
+- Change the design of the app
+- Add dark mode to the app
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
