@@ -1,10 +1,5 @@
 <a name="readme-top"></a>
 
-<div align="center">
-  <img src="https://github.com/microverseinc/readme-template/blob/master/murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-</div>
-
 <!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
@@ -78,6 +73,7 @@
 ### Key Features <a name="key-features"></a>
 
 > Describe between 1-3 key features of the application.
+
 - **ES6 Modules**
 - **Webpack**
 
@@ -126,12 +122,12 @@ Install this project with:
 ```
   cd my-project
 ```
+
 ```
   npm install
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ### Usage
 
