@@ -127,6 +127,10 @@ Install this project with:
   npm install
 ```
 
+```
+  npm install webpack webpack-cli --save-dev
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Usage
