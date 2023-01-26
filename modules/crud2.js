@@ -9,11 +9,11 @@ export const idReset = (lists) => {
 export const deleteCompletedTodos = (todoListss, todoUl) => {
   const newTodos = todoListss.filter((item) => item.completed !== true);
   idReset(newTodos);
-  localStorage.setItem("todos", JSON.stringify(newTodos));
+  localStorage.setItem('todos', JSON.stringify(newTodos));
 
   const elements = [...todoUl.children];
   elements.forEach((ele) => {
-    if (ele.id === "completed") {
+    if (ele.id === 'completed') {
       ele.remove();
     }
   });
@@ -21,12 +21,12 @@ export const deleteCompletedTodos = (todoListss, todoUl) => {
 
 // functionality to mark a todo as completed
 export const selectTodo = (checkBox, todoTitle, item, itemContainer) => {
-  itemContainer.id = "completed";
+  itemContainer.id = 'completed';
   if (checkBox.checked) {
-    todoTitle.style.textDecoration = "line-through";
+    todoTitle.style.textDecoration = 'line-through';
     item.completed = true;
   } else {
-    todoTitle.style.textDecoration = "none";
+    todoTitle.style.textDecoration = 'none';
     item.completed = false;
   }
 };
@@ -35,7 +35,7 @@ export const selectTodo = (checkBox, todoTitle, item, itemContainer) => {
 
 export const getDragAfetrElement = (container, y) => {
   const draggableElements = [
-    ...container.querySelectorAll(".todo:not(.draggable)"),
+    ...container.querySelectorAll('.todo:not(.draggable)'),
   ];
   return draggableElements.reduce(
     (closest, child) => {
@@ -46,6 +46,6 @@ export const getDragAfetrElement = (container, y) => {
       }
       return closest;
     },
-    { offset: Number.NEGATIVE_INFINITY }
+    { offset: Number.NEGATIVE_INFINITY },
   ).element;
 };
