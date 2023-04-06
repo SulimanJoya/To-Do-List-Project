@@ -116,5 +116,18 @@ describe('TodoApp', () => {
     updateTodo(todoTitle, 1, itemForm, checkBox, itemContainer, todoListss);
     expect(todoTitle.disabled).toBe(false);
   });
+
+   it('Should check if the task is been edited and disabled property is set to false', () => {
+    const todoUl = document.getElementById('todoList');
+    let todoListss = JSON.parse(window.localStorage.getItem('todos')) || [];
+    addTodo('this is the first todo', 1, todoListss, todoUl);
+    todoListss = JSON.parse(window.localStorage.getItem('todos')) || [];
+    itemContainer = window.document.querySelector('.todo');
+    const itemForm = document.createElement('form');
+    const todoTitle = document.querySelector('.todo_title');
+    const option = document.querySelector('.todo .material-symbols-outlined');
+    updateTodo(todoTitle, 1, itemForm, option, itemContainer, todoListss);
+    expect(option.innerText).toBe('delete');
+  });
   
 });
