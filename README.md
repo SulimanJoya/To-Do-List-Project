@@ -152,6 +152,11 @@ To run the project, execute the following command:
 - GitHub: [@SulimanJoya](https://github.com/SulimanJoya)
 - LinkedIn: [Mohammad Suliman Joya](https://www.linkedin.com/in/sjoya66/)
 
+👤 **KUBAHO LINNE Heaven**
+
+- GitHub: [@KUBAHO3](https://github.com/KUBAHO3)
+- LinkedIn: [Kubaho Linne Heaven](https://www.linkedin.com/in/kubaho-linne-heaven-78ab37208/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
