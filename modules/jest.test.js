@@ -1,5 +1,5 @@
 import addTodo from './addTodo.js';
-import { deleteTodo, updateTodo } from './crud.js';
+import { deleteTodo } from './crud.js';
 import { selectTodo } from './crud2.js';
 /**
  * @jest-environment jsdom
@@ -90,5 +90,5 @@ describe('TodoApp', () => {
 
     expect(itemContainer.id).toBe('completed');
   });
-  //Delet this comment and past the code here
+  // Delet this comment and past the code here
 });
