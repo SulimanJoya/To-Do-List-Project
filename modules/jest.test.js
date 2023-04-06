@@ -1,5 +1,5 @@
 import addTodo from './addTodo.js';
-import { deleteTodo } from './crud.js';
+import { deleteTodo, updateTodo } from './crud.js';
 import { selectTodo } from './crud2.js';
 /**
  * @jest-environment jsdom
@@ -90,7 +90,7 @@ describe('TodoApp', () => {
 
     expect(itemContainer.id).toBe('completed');
   });
-  
+
   it('should check if the task is been edited and the task background changes', () => {
     const todoUl = document.getElementById('todoList');
     let todoListss = JSON.parse(window.localStorage.getItem('todos')) || [];
@@ -104,7 +104,7 @@ describe('TodoApp', () => {
     expect(itemContainer.style.background).toBe('rgb(224, 224, 149)');
   });
 
-   it('should check if the task is been edited and disabled property is set to false', () => {
+  it('should check if the task is been edited and disabled property is set to false', () => {
     const todoUl = document.getElementById('todoList');
     let todoListss = JSON.parse(window.localStorage.getItem('todos')) || [];
     addTodo('this is the first todo', 1, todoListss, todoUl);
@@ -117,7 +117,7 @@ describe('TodoApp', () => {
     expect(todoTitle.disabled).toBe(false);
   });
 
-   it('Should check if the task is been edited and disabled property is set to false', () => {
+  it('Should check if the task is been edited and disabled property is set to false', () => {
     const todoUl = document.getElementById('todoList');
     let todoListss = JSON.parse(window.localStorage.getItem('todos')) || [];
     addTodo('this is the first todo', 1, todoListss, todoUl);
@@ -129,5 +129,4 @@ describe('TodoApp', () => {
     updateTodo(todoTitle, 1, itemForm, option, itemContainer, todoListss);
     expect(option.innerText).toBe('delete');
   });
-  
 });
