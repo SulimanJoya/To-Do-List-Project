@@ -145,12 +145,17 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+> Mentioned all of the collaborators of this project.
 
 👤 **Mohammad Suliman Joya**
 
 - GitHub: [@SulimanJoya](https://github.com/SulimanJoya)
 - LinkedIn: [Mohammad Suliman Joya](https://www.linkedin.com/in/sjoya66/)
+
+👤 **KUBAHO LINNE Heaven**
+
+- GitHub: [@KUBAHO3](https://github.com/KUBAHO3)
+- LinkedIn: [KUBAHO LINNE Heaven](https://www.linkedin.com/in/kubaho-linne-heaven-78ab37208/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
