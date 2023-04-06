@@ -90,5 +90,18 @@ describe('TodoApp', () => {
 
     expect(itemContainer.id).toBe('completed');
   });
-  // Delet this comment and past the code here
+  
+  it('should check if the task is been edited and the task background changes', () => {
+    const todoUl = document.getElementById('todoList');
+    let todoListss = JSON.parse(window.localStorage.getItem('todos')) || [];
+    addTodo('this is the first todo', 1, todoListss, todoUl);
+    todoListss = JSON.parse(window.localStorage.getItem('todos')) || [];
+    itemContainer = window.document.querySelector('.todo');
+    const checkBox = document.querySelector('.checkbox');
+    const itemForm = document.createElement('form');
+    const todoTitle = document.querySelector('.todo_title');
+    updateTodo(todoTitle, 1, itemForm, checkBox, itemContainer, todoListss);
+    expect(itemContainer.style.background).toBe('rgb(224, 224, 149)');
+  });
+  
 });
